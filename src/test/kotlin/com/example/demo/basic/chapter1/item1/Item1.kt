@@ -1,4 +1,4 @@
-package com.example.demo.basic.practice.basic
+package com.example.demo.basic.chapter1.item1
 
 // kotlin - 함수를 클래스 안에 정의할 필요가 없다.
 // 타입과 파라미터명 순서가 자바와 반대(최근 모던 랭귀지들의 추세와 동일하다.)
@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
 // 세미콜론(;)이 필요없다.
 // 배열처리를 위한 문법이 없다.
 
-class Chapter1 {
+class Item1 {
 //    함수
 //    코틀린에서 함수는 fun 키워드로 시작한다.
     fun sum(a: Int, b: Int) : Int {
