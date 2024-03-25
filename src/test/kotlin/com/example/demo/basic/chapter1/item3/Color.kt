@@ -1,6 +1,7 @@
 package com.example.demo.basic.chapter1.item3
 
 import com.example.demo.basic.chapter1.item3.Color.*
+import java.lang.RuntimeException
 
 // 자바의 Enum
 //    public enum Color {
@@ -40,6 +41,15 @@ fun getKoreanColors(color: Color): String =
             YELLOW -> "노랑"
             GREEN -> "녹색"
         }
+
+// 조건식이 길지 않고 유사도가 높은 경우 간혹 사용
+fun mix(c1: Color, c2: Color) {
+    when {
+        c1 == RED && c2 == YELLOW -> "오렌지"
+        c1 == YELLOW && c2 == GREEN -> "연두"
+        else -> throw RuntimeException()
+    }
+}
 
 // when 문은 Enum 클래스에 새로운 상수가 추가되었는데 기존 코드에서 처리가 안되어 있다면
 // 컴파일 에러를 낸다. -> 실수할 확률이 낮아진다. Java에서 Enum과 Switch를 같이 쓸 때의 고질적 문제점 해결
